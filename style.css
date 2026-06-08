@@ -1,0 +1,534 @@
+/* 공통 초기화 및 기본 스타일 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #1c1c1c;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 중앙 정렬 컨테이너 기본 너비 살짝 확장 (1240px) */
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   1. 헤더 (Header)
+   ========================================================================== */
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #eef2f5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+.logo a {
+    font-size: 26px;
+    font-weight: 900;
+    color: #002874;
+    letter-spacing: -0.5px;
+}
+.gnb ul {
+    display: flex;
+    gap: 50px;
+}
+.gnb a {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2b2b2b;
+    letter-spacing: 0.5px;
+}
+.gnb a:hover {
+    color: #0055ff;
+}
+.btn-order {
+    background: #002874;
+    color: #ffffff;
+    border: none;
+    padding: 12px 26px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   2. 메인 비주얼 배너 (Hero Section)
+   ========================================================================== */
+.hero {
+    position: relative;
+    height: 720px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.hero-container {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text-box {
+    max-width: 500px;
+    margin-top: -40px;
+}
+.badge-text {
+    display: inline-flex;
+    align-items: center;
+    color: #0066ff;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+.text-box h2 {
+    font-size: 58px;
+    font-weight: 900;
+    color: #002c8c;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+.sub-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0066ff;
+    margin-bottom: 18px;
+    letter-spacing: -0.2px;
+}
+.desc {
+    font-size: 15px;
+    color: #555c66;
+    line-height: 1.65;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+.btn-primary {
+    background: #ffea00;
+    color: #002c8c;
+    border: none;
+    padding: 16px 36px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+    display: inline-flex;
+    align-items: center;
+}
+.hero-controls {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.slider-num {
+    font-size: 14px;
+    color: #8c96a3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.slider-num .current {
+    color: #121212;
+    font-weight: 700;
+}
+.slider-num .divider {
+    width: 35px;
+    height: 1px;
+    background: #ccd2da;
+    display: inline-block;
+}
+.arrow-group {
+    display: flex;
+    gap: 8px;
+}
+.btn-arrow {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #dce1e8;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   3. 여름 스페셜 메뉴 (메뉴 카드 꽉 차게 보정)
+   ========================================================================== */
+.menu-section {
+    padding: 120px 0;
+    background-color: #ffffff;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 65px;
+}
+.section-header .category {
+    color: #0055ff;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.section-header h3 {
+    font-size: 38px;
+    font-weight: 900;
+    color: #111111;
+    margin-top: 8px;
+}
+.menu-grid {
+    display: flex;
+    gap: 24px;
+}
+.menu-card {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+    transition: transform 0.3s;
+}
+.menu-card:hover {
+    transform: translateY(-4px);
+}
+
+/* 🛠️ 보정: 내부 패딩을 없애고 이미지가 카드 좌우 끝까지 꽉 차게 만듭니다 */
+.img-wrap {
+    position: relative;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* 패딩 제거하여 빈 공간 삭제 */
+    overflow: hidden;
+}
+/* 🛠️ 보정: 크롭된 이미지 자체 배경이 유색 프레임에 여백 없이 꽉 들어차도록 cover 설정 */
+.img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.bg-red { background-color: #fff0f2; }
+.bg-yellow { background-color: #fff9e6; }
+.bg-blue { background-color: #eaf6ff; }
+
+.card-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    z-index: 10;
+}
+.badge-red { color: #ff3b5c; }
+.badge-yellow { color: #f2a104; }
+.badge-blue { color: #0099ff; }
+
+.info-wrap {
+    padding: 30px 24px;
+    text-align: center;
+}
+.info-wrap h4 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 10px;
+}
+.menu-desc {
+    font-size: 14px;
+    color: #777d85;
+    margin-bottom: 20px;
+}
+.price {
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 24px;
+    color: #ff3b5c;
+}
+.price span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111111;
+    margin-left: 2px;
+}
+.text-yellow { color: #f2a104; }
+.text-blue { color: #0099ff; }
+
+.btn-quick {
+    width: 100%;
+    padding: 14px;
+    background: #ffffff;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+.btn-quick-red { border: 1px solid #ff3b5c; color: #ff3b5c; }
+.btn-quick-red:hover { background: #ff3b5c; color: #ffffff; }
+
+.btn-quick-yellow { border: 1px solid #f2a104; color: #f2a104; }
+.btn-quick-yellow:hover { background: #f2a104; color: #ffffff; }
+
+.btn-quick-blue { border: 1px solid #0099ff; color: #0099ff; }
+.btn-quick-blue:hover { background: #0099ff; color: #ffffff; }
+
+/* ==========================================================================
+   4. 아래 앱 다운로드 배너 영역 (우측 이미지 그라데이션 일체화 및 풀 스케일)
+   ========================================================================== */
+.app-banner-section {
+    padding: 40px 0 100px;
+}
+.app-banner-inner {
+    background: #005bf3;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 80px; /* 🛠️ 보정: 우측 및 상단 패딩을 0으로 만들어 이미지가 채우게 함 */
+    overflow: hidden;
+    color: #ffffff;
+    height: 420px; /* 🛠️ 보정: 배너의 고정 높이를 주어 안정감 형성 */
+}
+.banner-text {
+    flex: 1;
+    padding: 40px 0;
+}
+.top-tag {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.85;
+    margin-bottom: 12px;
+}
+.banner-text h2 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.35;
+    letter-spacing: -0.5px;
+}
+.yellow-highlight {
+    color: #ffe600;
+}
+.benefit-icons-row {
+    display: flex;
+    gap: 25px;
+    margin: 35px 0 40px 0;
+}
+.icon-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.icon-circle {
+    width: 32px;
+    height: 32px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+.btn-more-view {
+    border: 1px solid #ffffff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    transition: background 0.2s;
+}
+.btn-more-view:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* 🛠️ 핵심 보정: 우측 핸드폰+배경 컴포지션 이미지가 배너 영역을 위아래/오른쪽 끝까지 완벽하게 채우도록 수정 */
+.banner-image-wrap {
+    flex: 1.2; 
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.banner-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 🛠️ 보정: 잘림 없이 빈 공간 없이 배너 우측 레이아웃에 꽉 맞춤 */
+    object-position: center right;
+}
+
+/* ==========================================================================
+   5. 푸터 (Footer)
+   ========================================================================== */
+.footer {
+    background: #ffffff;
+    padding: 80px 0 60px 0;
+    border-top: 1px solid #f2f2f2;
+    color: #666666;
+    font-size: 14px;
+    position: relative;
+}
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-left {
+    flex: 1;
+}
+.footer-logo {
+    font-size: 22px;
+    font-weight: 900;
+    color: #002874;
+    margin-bottom: 20px;
+}
+.footer-desc {
+    line-height: 1.6;
+    color: #777;
+    font-weight: 400;
+}
+.copyright {
+    margin-top: 40px;
+    font-size: 12px;
+    color: #aaaaaa;
+}
+.footer-right {
+    display: flex;
+    gap: 60px;
+}
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+.link-column h4 {
+    color: #111111;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.link-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.link-column a {
+    color: #666;
+}
+.link-column a:hover {
+    color: #0055ff;
+}
+.footer-subscribe h4 {
+    color: #111111;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.newsletter-info {
+    font-size: 13px;
+    color: #888888;
+    margin-bottom: 10px;
+}
+.input-group {
+    display: flex;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 240px;
+}
+.input-group input {
+    border: none;
+    padding: 10px 12px;
+    width: 100%;
+    outline: none;
+    font-size: 13px;
+}
+.btn-submit {
+    background: #ffffff;
+    border: none;
+    border-left: 1px solid #cccccc;
+    padding: 0 14px;
+    cursor: pointer;
+    color: #444;
+    font-weight: bold;
+}
+.btn-scroll-top {
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+    width: 44px;
+    height: 44px;
+    background: #002874;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
